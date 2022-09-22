@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="https://kit.fontawesome.com/d3d04ffbcf.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+  <link rel="stylesheet" href="styles/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин свечей</title>
+</head>
+<body>
+
+
+  <header>
+    <div class="container">
+      <a href="#" class="logo">candle</a>
+      <nav>
+        <a href="#">Каталог</a>
+        <a href="#">Контакты</a>
+      </nav>
+      <div class="site-search">
+        <input type="search" id="search-input">
+        <button type="button" id="search-btn"><i class="fa fa-search"></i></button>
+      </div>  
+    </div> 
+  </header>
+  <main>
+    <div class="container">
+      <div class="filters-sort">
+        <label for="sort">Сортировка:</label>
+        <select name="sort" id="sort">
+          <option selected value="alphabet">По алфавиту</option>
+          <option value="expensive">Сначала дорогие</option>
+          <option value="cheap">Сначала дешевые</option>
+          <option value="rating">Рейтинг</option>
+        </select>
+      </div>
+    </div>
+    <div class="container">
+      <section id="shop-items"></section>
+      <p id="nothing-found">Ничего не найдено</p>
+    </div>
+  </main>
+  <footer>
+    <a href="#" class="logo">candle</a>
+    <ul>
+      <li>
+        <a href="tel:+375172320332">+37517 232 0 332</a>
+      </li>
+      <li>
+        <a href="mailto:order@candle.com">order@candle.com</a>
+      </li>
+      <li>
+        <a href="#">пр-т Победителей, 1</a>
+      </li>
+    </ul>
+    <p>Мы открыты ежедневно 10:00 — 22:00</p>
+    <div class="social-links">
+      <a href="#" class="social-links__item"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-links__item" ><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-links__item" ><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+  <template>
+    <div class="shop-item">
+      <img src="">
+      <div class="content">
+        <div class="tags"></div>
+        <h1></h1>
+        <p></p>
+      </div>
+      <div class="bottom-info">
+        <span class="price"></span>
+        <div class="rating"></div>
+      </div>
+    </div>
+  </template>
+  <script src="script.js"></script>
+</body>
+</html>

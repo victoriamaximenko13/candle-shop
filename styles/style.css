@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Futura PT bold';
+  src: url('../fonts/FuturaPT-Bold.eot');
+  src: local('Futura PT Bold'), local('FuturaPT-Bold'),
+    url('../fonts/FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Bold.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Bold.woff') format('woff'),
+    url('../fonts/FuturaPT-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/FuturaPT-Book.eot');
+  src: local('Futura PT Book'), local('FuturaPTCond-Book'),
+    url('../fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Book.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Book.woff') format('woff'),
+    url('../fonts/FuturaPT-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Futura PT';
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f3f1;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+header {
+  padding: 30px 0;
+}
+
+header a {
+  font-size: 24px;
+}
+
+.logo {
+  font-family: 'Futura PT bold';
+  font-weight: bold;
+  font-size: 32px;
+  color: #582f08;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a:not(:last-child) {
+  margin-right: 40px;
+}
+
+.site-search {
+  display: flex;
+}
+
+.site-search input {
+  border: 1px solid #582f08;
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+  padding: 5px;
+  width: 250px;
+}
+
+.site-search button {
+  width: 50px;
+  background-color: #f5f3f1;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #582f08;
+}
+
+button i {
+  font-size: 20px;
+  color: #582f08;
+}
+
+.filters-sort {
+  padding: 20px 0;
+}
+
+.filters-sort label {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+#shop-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 50px 0;
+}
+
+.shop-item {
+  width: calc((100% - 3 * 20px) / 4);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid #582f08;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+.shop-item .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-item img {
+  width: 100%;
+}
+
+.shop-item h1 {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: 300;
+  height: 50px;
+}
+
+.shop-item .price {
+  font-weight: 700;
+  cursor: pointer;
+  color: #582f08;
+}
+
+.bottom-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.shop-item .rating {
+  cursor: pointer;
+  color: black;
+}
+
+.rating i {
+  color: #582f08;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  flex-shrink: 0;
+  background: #262626;
+}
+
+footer .logo {
+  color: #f5f3f1;
+}
+
+#nothing-found {
+  position: fixed;
+  white-space: nowrap;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  font-size: 32px;
+}
+
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.social-links a {
+  font-size: 1.7rem;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #262626;
+  background-color: #f5f3f1;;
+  text-align: center;
+  transition: .5s;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+footer p {
+  color: #B1B1B1;
+  margin-bottom: 30px;
+
+}
+
+ul a {
+  color: #f5f3f1;
+}
