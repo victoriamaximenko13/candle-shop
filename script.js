@@ -1,14 +1,14 @@
 const items = [
   {
     title: "Большая свеча Black Viper",
-    description: "лилия, розовый перец, уд, ирис, кожа, сандал, табак, фиалка, шафран",
+    description: "лилия, розовый перец, уд, ирис, кожа, сандал, табак, фиалка",
     price: 5000,
     img: "./img/black-viper.jpeg",
     rating: 4.4,
   },
   {
     title: "Свеча Coconut Grove",
-    description: "кокос, листья пальмы, бобы тонка, жасмин, лайм, мандарин, мята, сандал",
+    description: "кокос, листья пальмы, бобы тонка, жасмин, лайм, мандарин",
     price: 9000,
     img: "./img/coconut-grove.jpeg",
     rating: 3.1,
@@ -36,7 +36,7 @@ const items = [
   },
   {
     title: "Большая свеча Notorious Neroli",
-    description: "липа, бергамот, ветивер, лаванда, лимон, мандарин, мох, нероли, сандал",
+    description: "липа, бергамот, ветивер, лаванда, лимон, мандарин, мох, нероли",
     price: 2000,
     img: "./img/notorious-neroli.jpeg",
     rating: 3.2,
@@ -88,7 +88,7 @@ const items = [
 
 const cardContainer = document.querySelector("#shop-items");
 const cardTemplate = document.querySelector("template");
-const searchNothing = document.querySelector("#nothing-found");
+const nothingFound = document.querySelector("#nothing-found");
 
 
 function makeShopItem(shopItem) {
@@ -112,13 +112,13 @@ function makeShopItem(shopItem) {
 let currentItems = [...items];
 
 function showResultItems(array) {
-  searchNothing.textContent = "";
+  nothingFound.textContent = "";
   cardContainer.textContent = "";
   array.forEach((value) => {
     makeShopItem(value);
   });
   if (!array.length) {
-    searchNothing.textContent = "No results";
+    nothingFound.textContent = "No results";
 
   }
 }
@@ -168,11 +168,9 @@ const searchBtn = document.querySelector("#search-btn");
 
 function applySearch() {
   const searchValue = searchInput.value.trim().toUpperCase();
-  console.log(searchValue);
   currentItems = items.filter((string) => {
     return string.title.toUpperCase().includes(searchValue)
   });
-  console.log(currentItems);
   currentItems.sort((a, b) => sortByAlphabet(a, b));
   sortValue.selectedIndex = 0;
   showResultItems(currentItems);
